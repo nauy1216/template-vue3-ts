@@ -1,11 +1,21 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
+    <!-- <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
+    <router-view /> -->
+    <input v-model="a" />
+    <span>{{ a }}</span>
   </div>
-  <router-view />
 </template>
-
+<script lang="ts">
+import { defineComponent, reactive } from "vue";
+export default defineComponent({
+  setup() {
+    const data = reactive({ a: 1 });
+    return data;
+  },
+});
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
