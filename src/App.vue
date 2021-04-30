@@ -4,6 +4,8 @@
     <router-link to="/about">About</router-link>
     <router-view /> -->
     <input v-model="a" />
+
+    <div></div>
     <span>{{ a }}</span>
   </div>
 </template>
