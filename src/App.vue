@@ -7,15 +7,20 @@
 
     <div></div>
     <span>{{ a }}</span>
+    <Home />
   </div>
 </template>
 <script lang="ts">
 import { defineComponent, reactive } from "vue";
+import Home from "./views/Home.vue";
 export default defineComponent({
+  components: {
+    Home
+  },
   setup() {
     const data = reactive({ a: 1 });
     return data;
-  },
+  }
 });
 </script>
 <style lang="scss">
